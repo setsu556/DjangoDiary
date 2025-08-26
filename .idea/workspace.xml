@@ -6,8 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="396d64a8-3670-46e5-adeb-92ccd7395ceb" name="変更" comment="Djangoの導入を行い、diaryのトップページが表示されるまでを対応">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/diary/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/diary/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/diary/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/diary/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoDiary/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoDiary/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/diary/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/diary/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,18 +32,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "setsu556"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;setsu556&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/setsu556/DjangoDiary.git",
-    "accountId": "431338ce-9643-4acc-8550-48e3f93f4fcf"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/setsu556/DjangoDiary.git&quot;,
+    &quot;accountId&quot;: &quot;431338ce-9643-4acc-8550-48e3f93f4fcf&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
 }</component>
@@ -62,13 +63,14 @@
     "RunOnceActivity.git.unshallow": "true",
     "django.template.preview.state": "SHOW_EDITOR_AND_PREVIEW",
     "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
     "junie.onboarding.icon.badge.shown": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.sourceCode.HTML",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "to.speed.mode.migration.done": "true",
     "vue.rearranger.settings.migration": "true"
   }
@@ -120,6 +122,10 @@
       <workItem from="1755959863574" duration="521000" />
       <workItem from="1755960399068" duration="2641000" />
       <workItem from="1756106795347" duration="476000" />
+      <workItem from="1756129994462" duration="51000" />
+      <workItem from="1756130054016" duration="1779000" />
+      <workItem from="1756215898419" duration="64000" />
+      <workItem from="1756215969671" duration="3154000" />
     </task>
     <task id="LOCAL-00001" summary="Djangoの導入を行い、diaryのトップページが表示されるまでを対応">
       <option name="closed" value="true" />
@@ -134,6 +140,17 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Djangoの導入を行い、diaryのトップページが表示されるまでを対応" />
