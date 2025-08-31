@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="396d64a8-3670-46e5-adeb-92ccd7395ceb" name="変更" comment="">
-      <change afterPath="$PROJECT_DIR$/diary/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/diary/page_form.html" afterDir="false" />
+    <list default="true" id="396d64a8-3670-46e5-adeb-92ccd7395ceb" name="変更" comment="日記作成ページを追加し、ページ作成機能を実装">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/diary/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/diary/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/diary/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/diary/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/diary/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/diary/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/diary/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/diary/admin.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,7 +128,8 @@
       <workItem from="1756221788166" duration="302000" />
       <workItem from="1756475253628" duration="16000" />
       <workItem from="1756475276594" duration="3304000" />
-      <workItem from="1756479015893" duration="1292000" />
+      <workItem from="1756479015893" duration="1430000" />
+      <workItem from="1756647274674" duration="2131000" />
     </task>
     <task id="LOCAL-00001" summary="Djangoの導入を行い、diaryのトップページが表示されるまでを対応">
       <option name="closed" value="true" />
@@ -150,7 +147,15 @@
       <option name="project" value="LOCAL" />
       <updated>1756219284746</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="日記作成ページを追加し、ページ作成機能を実装">
+      <option name="closed" value="true" />
+      <created>1756480430144</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1756480430144</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -170,6 +175,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Djangoの導入を行い、diaryのトップページが表示されるまでを対応" />
     <MESSAGE value="日記ページモデルを追加し、`diary` アプリを設定に登録" />
-    <option name="LAST_COMMIT_MESSAGE" value="日記ページモデルを追加し、`diary` アプリを設定に登録" />
+    <MESSAGE value="日記作成ページを追加し、ページ作成機能を実装" />
+    <option name="LAST_COMMIT_MESSAGE" value="日記作成ページを追加し、ページ作成機能を実装" />
   </component>
 </project>
