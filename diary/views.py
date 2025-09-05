@@ -5,6 +5,7 @@ from django.shortcuts import render, redirect
 from django.views import View
 
 from diary.forms import PageForm
+from diary.models import Page
 
 
 class IndexView(View):
@@ -33,5 +34,14 @@ class PageCreateView(View):
             return render(request, 'diary/page_form.html', {'form': form})
 
 
+class PageListView(View):
+    @staticmethod
+    def get(request):
+        # DBから全件を取得する
+        page_all = Page.objects.all()
+        return render(request, 'diary/page_list.html', {'page_list': page_all})
+
+
 index = IndexView.as_view()
 page_create = PageCreateView.as_view()
+page_list = PageListView.as_view()

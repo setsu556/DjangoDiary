@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="396d64a8-3670-46e5-adeb-92ccd7395ceb" name="変更" comment="管理画面に日記ページモデルを登録し、フィールドを読み取り専用に設定">
-      <change afterPath="$PROJECT_DIR$/templates/base/diary_base.html" afterDir="false" />
+    <list default="true" id="396d64a8-3670-46e5-adeb-92ccd7395ceb" name="変更" comment="共通テンプレートを作成し、既存のHTMLファイルをリファクタリング">
+      <change afterPath="$PROJECT_DIR$/templates/diary/page_list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/diary/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/diary/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/diary/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/diary/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/diary/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/diary/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/diary/page_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/diary/page_form.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,29 +53,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;Django サーバー.DjangoDiary.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;django.template.preview.state&quot;: &quot;SHOW_EDITOR_AND_PREVIEW&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.Python&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "Django サーバー.DjangoDiary.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.pycharm.django.structure.promotion.once.per.project": "true",
+    "django.template.preview.state": "SHOW_EDITOR_AND_PREVIEW",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "junie.onboarding.icon.badge.shown": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.sourceCode.Python",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="DjangoDiary" type="Python.DjangoServer" factoryName="Django server">
       <module name="DjangoDiary" />
@@ -133,7 +135,8 @@
       <workItem from="1756647274674" duration="2131000" />
       <workItem from="1756649956768" duration="150000" />
       <workItem from="1756995343299" duration="11000" />
-      <workItem from="1756995360831" duration="581000" />
+      <workItem from="1756995360831" duration="900000" />
+      <workItem from="1757077980390" duration="1885000" />
     </task>
     <task id="LOCAL-00001" summary="Djangoの導入を行い、diaryのトップページが表示されるまでを対応">
       <option name="closed" value="true" />
@@ -167,7 +170,15 @@
       <option name="project" value="LOCAL" />
       <updated>1756650007492</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="共通テンプレートを作成し、既存のHTMLファイルをリファクタリング">
+      <option name="closed" value="true" />
+      <created>1756996210178</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1756996210178</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -189,6 +200,7 @@
     <MESSAGE value="日記ページモデルを追加し、`diary` アプリを設定に登録" />
     <MESSAGE value="日記作成ページを追加し、ページ作成機能を実装" />
     <MESSAGE value="管理画面に日記ページモデルを登録し、フィールドを読み取り専用に設定" />
-    <option name="LAST_COMMIT_MESSAGE" value="管理画面に日記ページモデルを登録し、フィールドを読み取り専用に設定" />
+    <MESSAGE value="共通テンプレートを作成し、既存のHTMLファイルをリファクタリング" />
+    <option name="LAST_COMMIT_MESSAGE" value="共通テンプレートを作成し、既存のHTMLファイルをリファクタリング" />
   </component>
 </project>
