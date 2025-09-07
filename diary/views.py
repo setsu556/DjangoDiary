@@ -1,7 +1,7 @@
 from datetime import datetime
 from zoneinfo import ZoneInfo
 
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.views import View
 
 from diary.forms import PageForm
@@ -38,10 +38,19 @@ class PageListView(View):
     @staticmethod
     def get(request):
         # DBから全件を取得する
-        page_all = Page.objects.all()
+        page_all = Page.objects.order_by('-page_date')
         return render(request, 'diary/page_list.html', {'page_list': page_all})
+
+
+class PageDetailView(View):
+    @staticmethod
+    def get(request, page_id):
+        # DBから指定されたIDのデータを取得する。取得できなかった場合は404
+        page = get_object_or_404(Page, id=page_id)
+        return render(request, 'diary/page_detail.html', {'page': page})
 
 
 index = IndexView.as_view()
 page_create = PageCreateView.as_view()
 page_list = PageListView.as_view()
+page_detail = PageDetailView.as_view()
