@@ -50,7 +50,27 @@ class PageDetailView(View):
         return render(request, 'diary/page_detail.html', {'page': page})
 
 
+class PageUpdateView(View):
+    @staticmethod
+    def get(request, page_id):
+        page = get_object_or_404(Page, id=page_id)
+        # 登録されていたデータを初期値として設定する
+        form = PageForm(instance=page)
+        return render(request, 'diary/page_update.html', {'form': form})
+
+    @staticmethod
+    def post(request, page_id):
+        page = get_object_or_404(Page, id=page_id)
+        form = PageForm(request.POST, request.FILES, instance=page)
+        if form.is_valid():
+            form.save()
+            return redirect('diary:page_detail', page_id=page_id)
+        else:
+            return render(request, 'diary/page_update.html', {'form': form})
+
+
 index = IndexView.as_view()
 page_create = PageCreateView.as_view()
 page_list = PageListView.as_view()
 page_detail = PageDetailView.as_view()
+page_update = PageUpdateView.as_view()
