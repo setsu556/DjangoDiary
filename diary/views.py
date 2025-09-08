@@ -25,7 +25,7 @@ class PageCreateView(View):
     # 入力画面から送信されたデータを処理するときの関数
     @staticmethod
     def post(request):
-        form = PageForm(request.POST)
+        form = PageForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
             # indexは urls.py に紐づいている
