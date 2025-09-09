@@ -8,4 +8,5 @@
     {% endif %}
     <br>
     <a href="{% url 'diary:page_update' page.id %}">編集</a>
+    <a href="{% url 'diary:page_delete' page.id %}">削除</a>
 {% endblock %}

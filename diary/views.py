@@ -69,8 +69,22 @@ class PageUpdateView(View):
             return render(request, 'diary/page_update.html', {'form': form})
 
 
+class PageDeleteView(View):
+    @staticmethod
+    def get(request, page_id):
+        page = get_object_or_404(Page, id=page_id)
+        return render(request, 'diary/page_confirm_delete.html', {'page': page})
+
+    @staticmethod
+    def post(request, page_id):
+        page = get_object_or_404(Page, id=page_id)
+        page.delete()
+        return redirect('diary:page_list')
+
+
 index = IndexView.as_view()
 page_create = PageCreateView.as_view()
 page_list = PageListView.as_view()
 page_detail = PageDetailView.as_view()
 page_update = PageUpdateView.as_view()
+page_delete = PageDeleteView.as_view()
