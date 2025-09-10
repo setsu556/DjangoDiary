@@ -1,6 +1,7 @@
 from datetime import datetime
 from zoneinfo import ZoneInfo
 
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import render, redirect, get_object_or_404
 from django.views import View
 
@@ -8,14 +9,14 @@ from diary.forms import PageForm
 from diary.models import Page
 
 
-class IndexView(View):
+class IndexView(LoginRequiredMixin, View):
     @staticmethod
     def get(request):
         datetime_now = datetime.now(ZoneInfo('Asia/Tokyo')).strftime('%Y年%m月%d日 %H:%M:%S')
         return render(request, 'diary/index.html', {'datetime_now': datetime_now})
 
 
-class PageCreateView(View):
+class PageCreateView(LoginRequiredMixin, View):
     # 入力画面を表示するときの関数
     @staticmethod
     def get(request):
@@ -34,7 +35,7 @@ class PageCreateView(View):
             return render(request, 'diary/page_form.html', {'form': form})
 
 
-class PageListView(View):
+class PageListView(LoginRequiredMixin, View):
     @staticmethod
     def get(request):
         # DBから全件を取得する
@@ -42,7 +43,7 @@ class PageListView(View):
         return render(request, 'diary/page_list.html', {'page_list': page_all})
 
 
-class PageDetailView(View):
+class PageDetailView(LoginRequiredMixin, View):
     @staticmethod
     def get(request, page_id):
         # DBから指定されたIDのデータを取得する。取得できなかった場合は404
@@ -50,7 +51,7 @@ class PageDetailView(View):
         return render(request, 'diary/page_detail.html', {'page': page})
 
 
-class PageUpdateView(View):
+class PageUpdateView(LoginRequiredMixin, View):
     @staticmethod
     def get(request, page_id):
         page = get_object_or_404(Page, id=page_id)
@@ -69,7 +70,7 @@ class PageUpdateView(View):
             return render(request, 'diary/page_update.html', {'form': form})
 
 
-class PageDeleteView(View):
+class PageDeleteView(LoginRequiredMixin, View):
     @staticmethod
     def get(request, page_id):
         page = get_object_or_404(Page, id=page_id)
