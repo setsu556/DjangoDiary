@@ -122,3 +122,7 @@ MEDIA_URL = '/media/'
 
 LOGIN_REDIRECT_URL = '/diary/'
 LOGOUT_REDIRECT_URL = '/login/'
+
+STATICFILES_DIRS = [
+    BASE_DIR / 'static'
+]
